@@ -1,18 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroListComponent } from './hero-list/hero-list.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
-  declarations: [
-    HeroListComponent,
-    HeroDetailComponent
-  ],
+  declarations: [HeroListComponent],
   imports: [
-    CommonModule,
-    HeroesRoutingModule
-  ]
+    CommonModule
+  ],
+  exports: [HeroListComponent]
 })
 export class HeroesModule { }

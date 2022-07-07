@@ -35,8 +35,4 @@ export class HeroService {
   deleteHero(id: number): Observable<any> {
     return this.http.delete(this.heroesUrl + id);
   }
-
-  getHero(id: number): Observable<Hero> {
-    return this.http.get<Hero>(this.heroesUrl + id);
-  }
 }
