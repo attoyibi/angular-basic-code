@@ -1,0 +1,20 @@
+<p>server works!</p>
+<!-- string interpolation(cara untuk memasukkan string ke dalam html) menggunakan double bracket / {{}}-->
+<p> {{name}}</p>
+<!-- <p> method : {{onServerComponentMethod()}}</p> -->
+<!-- property binding. menggunakan tanda array / [] -->
+<button (click)="onServerComponentMethod()" [disabled]="disableButton">example of property binding : {{ disableButton }}</button>
+
+<!-- simple event handler di angular menggunakan tanda kurung biasa / () -->
+<button (click)="onServerComponentMethod()">change value insite method</button>
+<br>
+<!-- menggunakan form dan event handle input  -->
+<input type="text" placeholder="form to write name server" (input)="onInputDataServer($event)"/>
+data server with event handle value : {{serverInput}}
+<hr>
+<!-- dirrective angular atribut -->
+<!-- <div *ngFor="let item of items">{{item.name}}</div> -->
+<div *ngFor="let currentServer of currentServerNames" [ngClass]=" currentServer.status === 'online' ? 'active' : 'notActive' " >Hello, {{currentServer.name}} - {{currentServer.status}}</div>
+Server Name : <input type="text" placeholder="server name" (input)="onChangeServerName($event)"/>
+{{name}}
+<button (click)="onAddServer()">add server</button>
