@@ -21,7 +21,7 @@ Create a db.json file with some data
 Start JSON Server
 
 json-server --watch db.json
-Now if you go to http://localhost:3000/posts/1, you'll get
+Now if you go to http://localhost:3001/posts/1, you'll get
 
 { "id": 1, "title": "json-server", "author": "typicode" }
 Also when doing requests, it's good to know that:

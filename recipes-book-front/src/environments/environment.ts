@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   basePath: '/api',
   wsEndpoint: 'ws://localhost:8081',
-  reconnectInterval: 2000
+  reconnectInterval: 2000,
 };
 
 /*

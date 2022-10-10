@@ -5,10 +5,9 @@ import { RecipesService } from '../core/services/recipes.service';
 
 @Component({
   selector: 'app-recipes-filter',
-  templateUrl: './recipes-filter.component.html'
+  templateUrl: './recipes-filter.component.html',
 })
 export class RecipesFilterComponent implements OnInit {
-
   recipeForm = this.fb.group({
     title: [''],
     category: [''],
@@ -18,18 +17,14 @@ export class RecipesFilterComponent implements OnInit {
     cookingTime: [''],
   });
 
-  constructor(private service: RecipesService, private fb: FormBuilder) { }
+  constructor(private service: RecipesService, private fb: FormBuilder) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   filterResults() {
+    console.log('masuk');
     this.service.updateFilter(this.recipeForm.value);
   }
 
-  clearFilter() {
-  }
-
-
-
+  clearFilter() {}
 }
